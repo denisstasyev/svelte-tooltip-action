@@ -1,0 +1,39 @@
+{
+  "name": "svelte-tooltip-action",
+  "version": "1.0.0",
+  "description": "Nice tooltip in the form of Svelte 3 action",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "format": "prettier --write 'src/**/*'",
+    "prepublishOnly": "npm run format & npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisstasyev/svelte-tooltip-action.git"
+  },
+  "keywords": [
+    "svelte",
+    "tooltip"
+  ],
+  "author": "Denis Stasyev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/denisstasyev/svelte-tooltip-action/issues"
+  },
+  "homepage": "https://github.com/denisstasyev/svelte-tooltip-action#readme",
+  "devDependencies": {
+    "prettier": "latest",
+    "prettier-plugin-svelte": "latest",
+    "rollup": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-svelte": "latest",
+    "sass": "latest",
+    "svelte": "latest",
+    "svelte-preprocess": "latest"
+  }
+}
