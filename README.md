@@ -29,9 +29,10 @@ npm i svelte-tooltip-action
   ...
 
   const text = 'Some extra text here (advice)'
+  const style = 'left: 0; bottom: -24px;'
 </script>
 
-<div use:tooltip={{ text, style: 'left: 0; bottom: -24px;' }}>
+<div use:tooltip="{{" text, style }}>
   Your awesome content here (for example, buttons)
 </div>
 ```
@@ -44,6 +45,8 @@ npm i svelte-tooltip-action
 | ----- | ------ | ------------ | --------------- |
 | text  | string | empty string | Tooltip's text  |
 | style | string | empty string | Your custom CSS |
+
+You can use `style` parameter to customize position of your tooltip instance with CSS `left: ...`, `top: ...`, `right: ...`, `bottom: ...`. Sometimes it's useful to combine several rules together. For example, if you want horizontally center tooltip use: `left: 50%; width: $tooltip-width; margin-left: $tooltip-width / 2`.
 
 ## Why my overlap not working?
 
@@ -61,7 +64,7 @@ new Tooltip({
 This property has some limitations. For example you cannot use it on `<img/>`, but you can wrap the image, so the tooltip will work:
 
 ```html
-<div use:tooltip={{text: 'Hi'}}>
+<div use:tooltip={{text: 'Hi', style: 'left: 0; bottom: 0;'}}>
   <img src='...' alt='...'/>
 </div>
 ```
