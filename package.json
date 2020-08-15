@@ -1,6 +1,6 @@
 {
   "name": "svelte-tooltip-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nice tooltip in the form of Svelte 3 action",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

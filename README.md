@@ -1,6 +1,10 @@
 # svelte-tooltip-action
 
+[![NPM version](https://img.shields.io/npm/v/svelte-tooltip-action.svg?style=flat)](https://www.npmjs.com/package/svelte-tooltip-action) [![NPM downloads](https://img.shields.io/npm/dm/svelte-tooltip-action.svg?style=flat)](https://www.npmjs.com/package/svelte-tooltip-action) [![Svelte v3](https://img.shields.io/badge/svelte-v3-blueviolet.svg)](https://svelte.dev)
+
 Simple beautiful tooltip in the form of Svelte 3 action
+
+![example](https://user-images.githubusercontent.com/25938785/90321786-a6179900-df55-11ea-8a77-0e0aff9e32c1.gif)
 
 ## :cake: Features
 
@@ -43,7 +47,9 @@ npm i svelte-tooltip-action
 
 ## Why my overlap not working?
 
-Please note that not all components can be overlaid with a tooltip because the `target` Svelte property is used under the hood:
+- Check CSS `position: relative` on your `<div />` (on `<div />` with `use:tooltip`)
+- Also do not put CSS `overflow: hidden` on parent HTML tags (in case of your tooltip will go over parents)
+- Please note that not all components can be overlaid with a tooltip because the `target` Svelte property is used under the hood:
 
 ```js
 new Tooltip({
@@ -60,7 +66,7 @@ This property has some limitations. For example you cannot use it on `<img/>`, b
 </div>
 ```
 
-Also do not put CSS `overflow: hidden` on parent HTML tags (in case of your tooltip will go over parents) and check CSS `z-index`.
+- Check CSS `z-index`
 
 ## License
 
