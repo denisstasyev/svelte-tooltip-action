@@ -45,6 +45,8 @@ npm i svelte-tooltip-action
 | text  | string | empty string | Tooltip's text  |
 | style | string | empty string | Your custom CSS |
 
+You can use `style` parameter to customize position of your tooltip instance with CSS `left: ...`, `top: ...`, `right: ...`, `bottom: ...`. Sometimes it's useful to combine several rules together. For example, if you want horizontally center tooltip use: `left: 50%; width: $tooltip-width; margin-left: $tooltip-width / 2`.
+
 ## Why my overlap not working?
 
 - Check CSS `position: relative` on your `<div />` (on `<div />` with `use:tooltip`)
