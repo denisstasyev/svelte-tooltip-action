@@ -32,7 +32,7 @@ npm i svelte-tooltip-action
   const style = 'left: 0; bottom: -24px;'
 </script>
 
-<div use:tooltip="{{" text, style }}>
+<div use:tooltip={{ text: text, style: style }}>
   Your awesome content here (for example, buttons)
 </div>
 ```
